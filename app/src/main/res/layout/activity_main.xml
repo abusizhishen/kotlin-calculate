@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <EditText
+    android:id="@+id/cost"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="116dp"
+    android:layout_marginTop="112dp"
+    android:ems="10"
+    android:hint="cost"
+    android:inputType="numberDecimal"
+    android:minHeight="48dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="SpeakableTextPresentCheck" />
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="197dp"
+    android:layout_height="25dp"
+    android:layout_marginStart="116dp"
+    android:layout_marginTop="8dp"
+    android:text="how was this service"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/cost" />
+
+  <RadioGroup
+    android:id="@+id/percent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="116dp"
+    android:layout_marginTop="29dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView"
+    tools:checkedButton="@id/nice">
+
+    <RadioButton
+      android:id="@+id/nice"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="nice(20%)" />
+
+    <RadioButton
+      android:id="@+id/well"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="well(10%)" />
+
+    <RadioButton
+      android:id="@+id/bad"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="bad(0%)" />
+  </RadioGroup>
+
+  <Switch
+    android:id="@+id/floor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="127dp"
+    android:layout_marginTop="227dp"
+    android:layout_marginEnd="51dp"
+    android:layout_marginBottom="20dp"
+    android:minWidth="48dp"
+    android:minHeight="48dp"
+    app:layout_constraintBottom_toTopOf="@+id/calculate"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textView2"
+    app:layout_constraintTop_toBottomOf="@+id/cost" />
+
+  <TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="116dp"
+    android:layout_marginTop="29dp"
+    android:text="四舍五入？"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/percent" />
+
+  <Button
+    android:id="@+id/calculate"
+    android:layout_width="277dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="80dp"
+    android:layout_marginTop="20dp"
+    android:text="calculate"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/floor" />
+
+  <TextView
+    android:id="@+id/totalCost"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="14dp"
+    android:layout_marginTop="35dp"
+    android:text="0.00"
+    app:layout_constraintStart_toEndOf="@+id/textView5"
+    app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+  <TextView
+    android:id="@+id/textView5"
+    android:layout_width="74dp"
+    android:layout_height="35dp"
+    android:layout_marginStart="210dp"
+    android:layout_marginTop="35dp"
+    android:text="总金额"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
